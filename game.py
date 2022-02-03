@@ -13,15 +13,15 @@ class Cell:
 class Game:
 
     def __init__(self):
-        self._table = [[0 for j in range(5)] for i in range(5)]
+        self._size = 5
+        self._table = [[0 for j in range(self._size)] for i in range(self._size)]
         self._score = 0
         self._selected_cell = None
         self._is_won = False
         self.spawn_cell(3)
-        self._table = [[j + i * 5 for j in range(5)] for i in range(5)]
 
     def set_new_game(self, num_of_el=3):
-        self._table = [[0 for j in range(5)] for i in range(5)]
+        self._table = [[0 for j in range(self._size)] for i in range(self._size)]
         self._is_won = False
         self._score = 0
         self.spawn_cell(num_of_el)
@@ -31,6 +31,9 @@ class Game:
 
     def get_score(self):
         return self._score
+
+    def get_size(self):
+        return self._size
 
     def _add_cells(self, c1: Cell, c2: Cell):
         if c2.value == 0:

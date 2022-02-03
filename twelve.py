@@ -18,13 +18,15 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super(MainWindow, self).__init__()
+        self.h = 700
+        self.w = 500
         self.setWindowTitle("The Twelve game")
         self.setWindowIcon(QtGui.QIcon("resources/main_ico.png"))
-        self.setFixedHeight(700)
-        self.setFixedWidth(500)
+        self.setFixedHeight(self.h)
+        self.setFixedWidth(self.w)
+        self.game = Game()
         self.grid = self.create_grid()
         self.styles = styles_from_file()
-        self.game = Game()
 
         self.info = QPushButton(self)
         self.info.move(10, 10)
@@ -51,12 +53,12 @@ class MainWindow(QMainWindow):
         self.refresh_score()
 
     def create_grid(self):
-        grid = [[QPushButton(self) for j in range(5)] for i in range(5)]
-        for i in range(5):
-            for j in range(5):
-                grid[i][j].move(j * 100, 200 + i * 100)
-                grid[i][j].setFixedHeight(100)
-                grid[i][j].setFixedWidth(100)
+        grid = [[QPushButton(self) for j in range(self.game.get_size())] for i in range(self.game.get_size())]
+        for i in range(self.game.get_size()):
+            for j in range(self.game.get_size()):
+                grid[i][j].move(j * int(self.w/self.game.get_size()), 200 + i * int(self.w/self.game.get_size()))
+                grid[i][j].setFixedHeight(int(self.w/self.game.get_size()))
+                grid[i][j].setFixedWidth(int(self.w/self.game.get_size()))
                 grid[i][j].clicked.connect(lambda checked, i=i, j=j: self.request(i, j))
         return grid
 
