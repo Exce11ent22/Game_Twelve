@@ -1,0 +1,13 @@
+background-color: #bebebe; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #ffbebe; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #ffaaaa; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #ff9696; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #ffab96; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #ffb682; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #ffd36b; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #fff06b; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #fcff4d; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #ddff47; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #b0ff3b; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #61ff30; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
+background-color: #00e313; color: white; font-size: 50px; border-radius: 5px; margin: 5px;
